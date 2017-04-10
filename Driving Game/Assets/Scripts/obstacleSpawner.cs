@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class obstacleSpawner : MonoBehaviour {
-	public GameObject obstacle;
+	public GameObject [] obstacles;
+	int obstacleNo;
 	public float maxPosition = 2.2f;
 	float timer;
 	public float delayTimer = 0.5f;
@@ -18,7 +19,8 @@ public class obstacleSpawner : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer <= 0) {
 			Vector3 obstaclePos = new Vector3 (Random.Range (-2.2f, 2.2f), transform.position.y, transform.position.z);
-			Instantiate (obstacle, obstaclePos, transform.rotation);
+			obstacleNo = Random.Range (0, 4);
+			Instantiate (obstacles[obstacleNo], obstaclePos, transform.rotation);
 			timer = delayTimer;
 
 		}
