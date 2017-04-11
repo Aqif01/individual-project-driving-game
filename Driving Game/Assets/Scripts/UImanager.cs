@@ -13,6 +13,9 @@ public class UImanager : MonoBehaviour {
 	void Update () {
 		
 	}
+	public void Play(){
+		Application.LoadLevel("level1");
+	}
 
 	public void Pause (){
 		if (Time.timeScale == 1) {
