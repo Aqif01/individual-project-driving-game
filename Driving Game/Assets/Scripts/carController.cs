@@ -9,6 +9,7 @@ public class carController : MonoBehaviour {
 	public float maxPosition = 2.2f;
 	//temporary position of the car
 	Vector3 position;
+	public UImanager ui;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +32,7 @@ public class carController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "Enemy Car") {
 			Destroy (gameObject);
+			ui.gameOverTrue ();
 		}
 	}
 }
