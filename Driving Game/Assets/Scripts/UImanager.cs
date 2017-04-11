@@ -19,9 +19,21 @@ public class UImanager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		scoreText.text = "Score: " + score;
+
+
+			//if (score >= 50) {
+			//	Application.LoadLevel("level2");
+			//}
 		
-		
+
 	}
+
+	//void OnCollisionEnter2D(Collision2D col){
+		//if (col.gameObject.tag == "question") {
+			//Application.LoadLevel ("question1");
+		//}
+	//}
+
 
 	void scoreUpdate(){
 		if (!gameOver) {
@@ -46,4 +58,6 @@ public class UImanager : MonoBehaviour {
 		}
 			
 	}
+
+
 }

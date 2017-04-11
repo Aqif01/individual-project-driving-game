@@ -14,6 +14,8 @@ public class taxiMove : MonoBehaviour {
 	void Update () {
 		//car moves in the y direction
 		transform.Translate (new Vector3 (0, 1, 0) * speed * Time.deltaTime);
-		
 	}
+		
+
+
 }

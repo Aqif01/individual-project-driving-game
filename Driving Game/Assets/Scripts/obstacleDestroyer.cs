@@ -19,6 +19,12 @@ public class obstacleDestroyer : MonoBehaviour {
 		//if the enemy car collides with the collider
 		if (col.gameObject.tag == "Enemy Car") {
 			Destroy (col.gameObject);
+		} else if (col.gameObject.tag == "question") {
+			Destroy (col.gameObject);
 		}
+
+
+			
 	}
 }
+
