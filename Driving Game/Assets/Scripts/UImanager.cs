@@ -7,6 +7,7 @@ public class UImanager : MonoBehaviour {
 	public Text scoreText;
 	int score;
 	bool gameOver;
+	public Button [] buttons;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +44,10 @@ public class UImanager : MonoBehaviour {
 
 	public void gameOverTrue(){
 		gameOver = true;
+		//activating buttons when game is over
+		foreach (Button button in buttons) {
+			button.gameObject.SetActive (true);
+		}
 	}
 
 
@@ -57,6 +62,18 @@ public class UImanager : MonoBehaviour {
 			Time.timeScale = 1;
 		}
 			
+	}
+
+	public void Replay(){
+		Application.LoadLevel (Application.loadedLevel);
+	}
+
+	public void Menu(){
+		Application.LoadLevel ("menu");
+	}
+
+	public void Exit(){
+		Application.Quit ();
 	}
 
 
