@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UImanager : MonoBehaviour {
 	public Text scoreText;
@@ -25,8 +26,6 @@ public class UImanager : MonoBehaviour {
 			//if (score >= 50) {
 			//	Application.LoadLevel("level2");
 			//}
-		
-
 	}
 
 	//void OnCollisionEnter2D(Collision2D col){
@@ -52,7 +51,7 @@ public class UImanager : MonoBehaviour {
 
 
 	public void Play(){
-		Application.LoadLevel("level1");
+		SceneManager.LoadScene ("level1");
 	}
 
 	public void Pause (){
@@ -65,11 +64,11 @@ public class UImanager : MonoBehaviour {
 	}
 
 	public void Replay(){
-		Application.LoadLevel (Application.loadedLevel);
+		SceneManager.LoadScene (Application.loadedLevel);
 	}
 
 	public void Menu(){
-		Application.LoadLevel ("menu");
+		SceneManager.LoadScene ("menu");
 	}
 
 	public void Exit(){

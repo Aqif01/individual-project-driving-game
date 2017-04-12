@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class triggerQuestion : MonoBehaviour {
-	string[] zones = new string[3] { "question1", "question2", "question3"};
+	string[] zones = new string[3] { "question1", "question1", "question1"};
 	List<float> usedValues = new List <float>();
 	public int UniqueRandomInt (int min, int max)
 	{
